@@ -1,6 +1,6 @@
 {
 	"name": "init-cypher-space",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"bin": {
 		"init-cypher-space": "./cli.js"
 	},
