@@ -1,0 +1,30 @@
+{
+	"name": "init-cypher-space",
+	"version": "0.0.3",
+	"bin": {
+		"init-cypher-space": "./cli.js"
+	},
+	"files": [
+		"cli.js"
+	],
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+  "engines": {
+    "node": ">=18"
+  },
+	"keywords": [
+		"npx",
+		"template",
+		"cypher-space"
+	],
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/cypher-space/V0.9-Beta.git"
+	},
+	"bugs": {
+		"url": "https://github.com/cypher-space/V0.9-Beta/issues"
+	},
+	"homepage": "https://github.com/cypher-space/V0.9-Beta#readme"
+}
