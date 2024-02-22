@@ -1,6 +1,6 @@
 {
 	"name": "create-cypher",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"bin": {
 		"create-cypher": "./cli.js"
 	},
@@ -16,15 +16,17 @@
 	"keywords": [
 		"npx",
 		"template",
+		"cypher",
+		"btcmaxi",
 		"cypher-space"
 	],
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/cypher-space/V0.9-Beta.git"
+		"url": "https://github.com/cypher-space/template.git"
 	},
 	"bugs": {
-		"url": "https://github.com/cypher-space/V0.9-Beta/issues"
+		"url": "https://github.com/cypher-space/template/issues"
 	},
-	"homepage": "https://github.com/cypher-space/V0.9-Beta#readme"
+	"homepage": "https://github.com/cypher-space/template#readme"
 }

@@ -1,4 +1,4 @@
-# init-cypher-space
+# create-cypher
 
 Initialize a Cypher Nuxt3 Template.
 
