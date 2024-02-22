@@ -7,7 +7,6 @@ Initialize a Cypher Nuxt3 Template.
 Make sure to have NodeJs v18 or higher then type the following command into your terminal:
 
 ```shell
-npm create cypher
 npx create-cypher
 ```
 
