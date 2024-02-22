@@ -9,7 +9,7 @@ const readline = require("readline");
 
 console.log("📌 Cypher.space Template initialization...");
 
-const repo = "https://github.com/cypher-space/template.git";
+const repo = "https://github.com/cypher-space/Template.git";
 
 const rl = readline.createInterface({
 	input: process.stdin,

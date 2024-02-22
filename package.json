@@ -23,10 +23,10 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/cypher-space/template.git"
+		"url": "https://github.com/cypher-space/Template.git"
 	},
 	"bugs": {
-		"url": "https://github.com/cypher-space/template/issues"
+		"url": "https://github.com/cypher-space/Template/issues"
 	},
-	"homepage": "https://github.com/cypher-space/template#readme"
+	"homepage": "https://github.com/cypher-space/Template#readme"
 }
