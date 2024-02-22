@@ -11,8 +11,6 @@ npm create cypher
 npx create-cypher
 ```
 
-That's it! you now initialized your **Cypher.space** template ✨
-
 ## Npx initial template setup
 (1) - What is the name of your project -> config ( text logo & name )
 
@@ -26,3 +24,7 @@ That's it! you now initialized your **Cypher.space** template ✨
 
 If (6) false don’t ask else
 (7) Alby token ? -> config ( albytoken )
+
+
+That's it! you now initialized your **Cypher.space** template ✨
+
