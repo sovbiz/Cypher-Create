@@ -1,8 +1,8 @@
 {
-	"name": "init-cypher-space",
+	"name": "create-cypher",
 	"version": "0.0.4",
 	"bin": {
-		"init-cypher-space": "./cli.js"
+		"create-cypher": "./cli.js"
 	},
 	"files": [
 		"cli.js"
