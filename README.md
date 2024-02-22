@@ -7,7 +7,8 @@ Initialize a Cypher Nuxt3 Template.
 Make sure to have NodeJs v18 or higher then type the following command into your terminal:
 
 ```shell
-npx init-cypher-space
+npm create cypher
+npx create-cypher
 ```
 
 That's it! you now initialized your **Cypher.space** template ✨
