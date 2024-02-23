@@ -55,14 +55,17 @@ const init = async () => {
 		]);
 
 		if (answers.finance)
-			answers.albytoken = await inquirer.prompt([
-				{
-					type: "input",
-					name: "albytoken",
-					message: "🛠  Alby token: ",
-					default: "",
-				},
-			]);
+			answers.albytoken =
+				(
+					await inquirer.prompt([
+						{
+							type: "input",
+							name: "albytoken",
+							message: "🛠  Alby token: ",
+							default: "",
+						},
+					])
+				).albytoken ?? "";
 
 		try {
 			console.log(
