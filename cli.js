@@ -15,7 +15,7 @@ const init = async () => {
 	try {
 		// DATA
 		const owner = "cypher-space";
-		const repoName = "V0.9-Beta";
+		const repoName = "Template";
 
 		/** @type {string | undefined} */
 		let projectDir;
