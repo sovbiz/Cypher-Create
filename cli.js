@@ -172,7 +172,7 @@ const init = async () => {
 
 		console.log(
 			"\x1b[32m%s\x1b[0m",
-			"✅ Template initialized successfully! \nType `cd ${answers.name}` to open your fresh template ✨"
+			`✅ Template initialized successfully! \nType 'd ${answers.name}' to open your fresh template ✨`
 		);
 		console.log(
 			"\x1b[32m%s\x1b[0m",
