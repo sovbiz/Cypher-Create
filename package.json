@@ -1,6 +1,6 @@
 {
 	"name": "create-cypher",
-	"version": "0.0.9",
+	"version": "0.0.10",
 	"bin": {
 		"create-cypher": "./cli.js"
 	},
