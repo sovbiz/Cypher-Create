@@ -28,9 +28,11 @@
 	},
 	"homepage": "https://github.com/cypher-space/V0.9-Beta#readme",
 	"dependencies": {
-		"inquirer": "^8.0.0"
+		"inquirer": "^8.0.0",
+		"tar": "^6.2.0"
 	},
 	"devDependencies": {
-		"@types/inquirer": "^9.0.7"
+		"@types/inquirer": "^9.0.7",
+		"@types/node-fetch": "^2.6.11"
 	}
 }
