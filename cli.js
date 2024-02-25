@@ -27,7 +27,7 @@ const init = async () => {
 		/** @type {{[name:string]: number | string | {[name:string]: any }} | undefined} */
 		let projectSetupConfig;
 
-		console.log(`📌 ${owner} Template initialization...`);
+		console.log(`📌 ${owner} Template initialization... please have your LNurl, Bc1 recieve address and recieving webhook (discord) at hand. Leave blank to run in demo mode, you can set these variables in the config/setup.json file.`);
 		/** @type {{ name?: string; blog: boolean; store: boolean; lnurl?: string; btcadress?: string; orderwebhook>: string; finance: boolean; albytoken?: string }} */
 		const answers = await inquirer.prompt([
 			{
@@ -56,12 +56,12 @@ const init = async () => {
 			{
 				type: "input",
 				name: "btcadress",
-				message: "🛠  Enter a receiving bitcoin segwit address for your store: ",
+				message: "🛠  Enter a receiving bitcoin segwit address: ",
 			},
 			{
 				type: "input",
 				name: "orderwebhook",
-				message: "🛠  Set your order webhook: ",
+				message: "🛠  Set your order webhook (discord): ",
 			},
 			{
 				type: "confirm",
@@ -79,7 +79,7 @@ const init = async () => {
 						{
 							type: "input",
 							name: "albytoken",
-							message: "🛠  Alby token: ",
+							message: "🛠  Alby Read Only developer token: ",
 							default: "",
 						},
 					])
@@ -172,11 +172,11 @@ const init = async () => {
 
 		console.log(
 			"\x1b[32m%s\x1b[0m",
-			`✅ Template initialized successfully! \nType 'd ${answers.name}' to open your fresh template ✨`
+			`✅ Template initialized successfully! \nType 'cd ${answers.name}' to go into your new template and \nType 'npm run dev' ✨`
 		);
 		console.log(
 			"\x1b[32m%s\x1b[0m",
-			`📌 Don't worry, you can modify those settings at any times in '${answers.name}/config/setup.json'`
+			`📌 You can modify settings at any times in '${answers.name}/config/setup.json'`
 		);
 	} catch (err) {
 		try {
