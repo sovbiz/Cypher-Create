@@ -16,6 +16,9 @@ const init = async () => {
 		// DATA
 		const owner = "cypher-space";
 		const repoName = "Template";
+		const apiUrl = `https://api.github.com/repos/${owner}/${repoName}/tarball/main`;
+		const tmpDir = path.join(__dirname, `${owner}_tmp`);
+		const tarPath = path.join(tmpDir, "template.tar");
 
 		/** @type {string | undefined} */
 		let projectDir;
@@ -89,10 +92,8 @@ const init = async () => {
 				"\x1b[36m%s\x1b[0m",
 				`🛠 Fetching 'cypher-space' template into ${answers.name}...`
 			);
-			const apiUrl = `https://api.github.com/repos/${owner}/${repoName}/tarball/main`;
-			const tmpDir = path.join(__dirname, ".cypher-space-tmp");
+
 			fs.mkdirSync(tmpDir, { recursive: true });
-			const tarPath = path.join(tmpDir, "downloaded_repo.tar");
 			const response = await fetch(apiUrl, {
 				headers: {
 					"User-Agent": "cypher-space",
@@ -112,9 +113,8 @@ const init = async () => {
 			fs.unlinkSync(tarPath);
 
 			const extractedFolderName = fs.readdirSync(tmpDir)[0];
-			const newDestination = path.join(__dirname, answers.name);
 
-			fs.renameSync(path.join(tmpDir, extractedFolderName), newDestination);
+			fs.renameSync(path.join(tmpDir, extractedFolderName), projectDir);
 			fs.rmSync(tmpDir, { recursive: true });
 		} catch (_) {
 			console.log(_);
@@ -179,10 +179,18 @@ const init = async () => {
 			`📌 Don't worry, you can modify those settings at any times in '${answers.name}/config/setup.json'`
 		);
 	} catch (err) {
+		try {
+			fs.unlinkSync(tarPath);
+		} catch (_) {}
+
+		try {
+			fs.rmSync(tmpDir, { recursive: true });
+		} catch (_) {}
+
 		console.warn(
 			"\x1b[31m%s\x1b[0m",
 			`🚧 Something went wrong: ${
-				typeof err !== "string" ? "Unable resolve the prompt" : err
+				typeof err !== "string" ? "🛑 Unable resolve the prompt" : err
 			}`
 		);
 	}
