@@ -1,6 +1,6 @@
 {
 	"name": "create-cypher",
-	"version": "0.0.13",
+	"version": "0.0.14",
 	"bin": {
 		"create-cypher": "./cli.js"
 	},
@@ -17,7 +17,8 @@
 		"npx",
 		"template",
 		"cypher",
-		"btcmaxi",
+		"bitcoin",
+		"lightning",
 		"cypher-space"
 	],
 	"license": "MIT",

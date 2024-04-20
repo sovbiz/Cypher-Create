@@ -63,27 +63,7 @@ const init = async () => {
 				name: "orderwebhook",
 				message: "🛠  Set your order webhook (discord): ",
 			},
-			{
-				type: "confirm",
-				name: "finance",
-				message:
-					"🛠  Do you want to enable an open finance (experimental alby only): ",
-				default: false,
-			},
 		]);
-
-		if (answers.finance)
-			answers.albytoken =
-				(
-					await inquirer.prompt([
-						{
-							type: "input",
-							name: "albytoken",
-							message: "🛠  Alby Read Only developer token: ",
-							default: "",
-						},
-					])
-				).albytoken ?? "";
 
 		projectDir = path.resolve(process.cwd(), answers.name);
 
