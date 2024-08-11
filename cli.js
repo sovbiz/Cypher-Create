@@ -14,8 +14,8 @@ const pipelineAsync = promisify(pipeline);
 const init = async () => {
 	try {
 		// DATA
-		const owner = "cypher-space";
-		const repoName = "Template";
+		const owner = "sovbiz";
+		const repoName = "Cypher-Nostr-Edition";
 		const apiUrl = `https://api.github.com/repos/${owner}/${repoName}/tarball/main`;
 		const tmpDir = path.join(__dirname, `${owner}_tmp`);
 		const tarPath = path.join(tmpDir, "template.tar");
@@ -27,8 +27,8 @@ const init = async () => {
 		/** @type {{[name:string]: number | string | {[name:string]: any }} | undefined} */
 		let projectSetupConfig;
 
-		console.log(`📌 ${owner} Template initialization... please have your LNurl, Bc1 recieve address and recieving webhook (discord) at hand. Leave blank to run in demo mode, you can set these variables in the config/setup.json file.`);
-		/** @type {{ name?: string; blog: boolean; store: boolean; lnurl?: string; btcadress?: string; orderwebhook>: string; finance: boolean; albytoken?: string }} */
+		console.log(`📌 ${owner} Template initialization... please have your Npub ready !`);
+		/** @type {{ name?: string; blog: boolean; store: boolean; nostradmin?: string; btcadress?: string; orderwebhook>: string; finance: boolean; albytoken?: string }} */
 		const answers = await inquirer.prompt([
 			{
 				type: "input",
@@ -50,13 +50,8 @@ const init = async () => {
 			},
 			{
 				type: "input",
-				name: "lnurl",
-				message: "🛠  Enter your Lightning LNUrl: ",
-			},
-			{
-				type: "input",
-				name: "btcadress",
-				message: "🛠  Enter a receiving bitcoin segwit address: ",
+				name: "nostradmin",
+				message: "🛠  Enter your Npub ",
 			},
 			{
 				type: "input",
@@ -119,11 +114,7 @@ const init = async () => {
 			projectSetupConfig.textlogo = answers.name ?? projectSetupConfig.name;
 			projectSetupConfig.blog = answers.blog ?? projectSetupConfig.blog;
 			projectSetupConfig.shop = answers.shop ?? projectSetupConfig.shop;
-			projectSetupConfig.lnurl = answers.lnurl ?? projectSetupConfig.lnurl;
-			projectSetupConfig.btcadress =
-				answers.btcadress ?? projectSetupConfig.btcadress;
-			projectSetupConfig.btcadress =
-				answers.btcadress ?? projectSetupConfig.btcadress;
+			projectSetupConfig.nostradmin = answers.nostradmin ?? projectSetupConfig.nostradmin;
 			projectSetupConfig.finance =
 				answers.finance ?? projectSetupConfig.finance;
 			if (answers.albytoken) projectSetupConfig.albytoken = answers.albytoken;
